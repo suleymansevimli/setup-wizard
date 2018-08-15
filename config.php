@@ -17,9 +17,20 @@
       $dbUser = htmlspecialchars(str_replace(" ","",$dbUser));
       $dbPass = htmlspecialchars(str_replace(" ","",$dbPass));
 
-      if (empty($host) && empty($dbname) && empty($dbUser) && empty($dbPass)) {
+      // tüm bunlara rağmen hala boş olup olmadığını herhangi bir değer için kontrol edelim
+      # Password alanını kontrol etmek kendinize kalmış localhost'ta çalışanlar için aşağıdaki gibi,
+      if (empty($host) || empty($dbname) || empty($dbUser)) {
         header("Location:index.php?error=empty");
       }
+
+      // Host üzerinde çalışanlar için aşağıdaki gibi bir kullanım olmalıdır.
+      
+      /*
+      | if (empty($host) || empty($dbname) || empty($dbUser)) {
+      |    header("Location:index.php?error=empty");
+      |   }
+      */
+
       // Try-catch yapımızı oluşturuyoruz.
       #en son temizlenmiş halleriyle beraber try-catch değişkenlerimizi içerisine yerleştiriyoruz.
       try {
