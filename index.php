@@ -16,7 +16,7 @@
 
  ?>
  <!-- database bilgilerini alacağımız formumuzu oluşturuyoruz -->
-<h1 style="text-align:center"> Welcom to Database Setup Wizard
+<h1 style="text-align:center"> Welcome to Database Setup Wizard
 </h1> <br>
    <form align="center" class="" action="config.php"  method="post">
 
