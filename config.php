@@ -24,7 +24,7 @@
       }
 
       // Host üzerinde çalışanlar için aşağıdaki gibi bir kullanım olmalıdır.
-      
+
       /*
       | if (empty($host) || empty($dbname) || empty($dbUser)) {
       |    header("Location:index.php?error=empty");
@@ -44,9 +44,17 @@
 
       }
 
-
-
-
+      // aldığımız parametreler doğru ise bu değerleri bir txt dosyasına kaydediyoruz..
+      $baglanti = $host.".".$dbname.".".$dbUser.".".$dbPass;
+      if (isset($db) && $db == true) {
+        $file = touch('db.txt');
+        $file_o = fopen('db.txt','w+');
+        $file_w = fwrite($file_o,$baglanti);
+        $file_c = fclose($file_o);
+        // bundan sonraki işlemlerimiz pages klasörü altındaki index.php altında gerçekleşecek.
+        echo "<a href=\"pages/index.php\"> Devam Etmek için tıklayın </a>";
+        // header("Location:pages/index.php");
+      }
 
     }
 

@@ -1,0 +1,7 @@
+pages/libs
+pages/vendor
+composer.json
+composer.lock
+ornek.sql
+db.txt
+test.sql

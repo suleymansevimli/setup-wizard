@@ -13,6 +13,7 @@
           echo emptySend();
       }
     }
+
  ?>
  <!-- database bilgilerini alacağımız formumuzu oluşturuyoruz -->
 <h1 style="text-align:center"> Welcom to Database Setup Wizard
