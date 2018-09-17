@@ -26,7 +26,7 @@
       // Host üzerinde çalışanlar için aşağıdaki gibi bir kullanım olmalıdır.
 
       /*
-      | if (empty($host) || empty($dbname) || empty($dbUser)) {
+      | if (empty($host) || empty($dbname) || empty($dbUser) || empty($dbpass)) {
       |    header("Location:index.php?error=empty");
       |   }
       */
